@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="/eel.js"></script>
+
+	<script type="text/javascript">
+		eel.loge('hi elcot')
+	</script>
+</head>
+<body>
+
+</body>
+</html>

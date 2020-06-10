@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<script>
+body{
+background-image:url("desktop/cam.png");
+}
+</script>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	
+	<script type="text/javascript" src="/eel.js"></script>
+
+	<script type="text/javascript">
+		eel.expose(result)
+		function result(x){
+			document.getElementById('buggle').innerHTML="The bulge width is :  "+x[0]
+			document.getElementById('height').innerHTML="The height reduction per pass is :  "+x[1]+"mm"
+			document.getElementById('no-pass').innerHTML="Optimized number of pass is :  "+x[2]
+			document.getElementById('temp').innerHTML="Operating temperature is :  "+x[3]+"°C"
+		}
+
+		function fetch(){
+			x=document.getElementById('thickness').value
+			
+
+			eel.ans(x)
+		}
+	</script>
+</head>
+<body>
+
+	
+<h2>Calculator</h2>
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <h4>Thickness</h4>
+      </div>
+      <div class="col-75">
+        <input type="text" id="thickness">
+      </div>
+    </div>
+    <div class="row">
+    	<h4>
+      <button type="button" onclick="fetch()">Submit</button>
+  </h4>
+    </div>
+  </form>
+</div>
+<h3 id="buggle"></h3>
+<h3 id="height"></h3>
+<h3 id="no-pass"></h3>
+<h3 id="temp"></h3>
+
+</body>
+</html>
